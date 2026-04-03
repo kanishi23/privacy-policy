@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy – epub-reader</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a1a;
+      --ink-soft: #555;
+      --ink-muted: #999;
+      --paper: #faf8f4;
+      --accent: #2d6a4f;
+      --accent-light: #e8f5ee;
+      --rule: #e0dbd2;
+      --max: 680px;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+      animation: fadeDown .6s ease both;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: var(--accent-light);
+      border: 1px solid #b7d9c6;
+      border-radius: 999px;
+      padding: .3rem 1rem .3rem .5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .app-icon {
+      width: 28px; height: 28px;
+      background: var(--accent);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .app-icon svg { width: 16px; height: 16px; fill: #fff; }
+
+    .app-badge span {
+      font-size: .78rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .subtitle {
+      margin-top: .75rem;
+      font-size: .9rem;
+      color: var(--ink-muted);
+      letter-spacing: .02em;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* ── Highlight block ── */
+    .highlight {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 3rem;
+      animation: fadeUp .6s .1s ease both;
+    }
+
+    .highlight p {
+      font-size: .95rem;
+      color: var(--accent);
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 2.75rem;
+      animation: fadeUp .6s ease both;
+    }
+
+    section:nth-child(2) { animation-delay: .15s; }
+    section:nth-child(3) { animation-delay: .2s; }
+    section:nth-child(4) { animation-delay: .25s; }
+    section:nth-child(5) { animation-delay: .3s; }
+    section:nth-child(6) { animation-delay: .35s; }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: .75rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+
+    h2::before {
+      content: '';
+      display: block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: .95rem;
+      color: var(--ink-soft);
+      margin-bottom: .6rem;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: .5rem;
+    }
+
+    ul li {
+      font-size: .92rem;
+      color: var(--ink-soft);
+      padding: .4rem 0 .4rem 1.4rem;
+      position: relative;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 2rem 0;
+    }
+
+    /* ── Contact ── */
+    .contact-box {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: .75rem;
+    }
+
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: .95rem;
+    }
+
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      padding: 2rem;
+      font-size: .8rem;
+      color: var(--ink-muted);
+      letter-spacing: .03em;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      header { padding: 2rem 1.25rem 1.75rem; }
+      main   { padding: 2rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge">
+    <div class="app-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 8H13V3.5zM8 13h8v1H8v-1zm0 3h6v1H8v-1zm0-6h3v1H8v-1z"/>
+      </svg>
+    </div>
+    <span>epub-reader</span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">Last updated: April 3, 2026</p>
+</header>
+
+<main>
+
+  <div class="highlight">
+    <p>📖 epub-readerはユーザーの個人情報を一切収集しません。<br>すべてのデータはお使いのデバイス内にのみ保存されます。</p>
+  </div>
+
+  <section>
+    <h2>はじめに</h2>
+    <p>epub-reader（以下「本アプリ」）は、シンプルなEPUBリーダーアプリです。本プライバシーポリシーは、本アプリがどのようにユーザー情報を取り扱うかを説明するものです。</p>
+  </section>
+
+  <section>
+    <h2>収集する情報</h2>
+    <p>本アプリは、以下の情報を<strong>一切収集・送信しません。</strong></p>
+    <ul>
+      <li>氏名・メールアドレスなどの個人情報</li>
+      <li>読書履歴・閲覧したファイルの情報</li>
+      <li>位置情報</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>ローカルストレージについて</h2>
+    <p>EPUBファイルおよび読書に関するデータ（しおり、進捗など）はすべてお使いのデバイス内にのみ保存されます。外部サーバーへの送信は行いません。</p>
+  </section>
+
+  <section>
+    <h2>第三者サービス</h2>
+    <p>本アプリは広告ネットワーク・分析ツール・トラッキングサービスを一切使用しません。アカウント登録も不要です。</p>
+  </section>
+
+  <section>
+    <h2>お子様のプライバシー</h2>
+    <p>本アプリは13歳未満のお子様から意図的に情報を収集することはありません。個人情報を収集しない設計のため、年齢に関わらず安全にご利用いただけます。</p>
+  </section>
+
+  <section>
+    <h2>本ポリシーの変更</h2>
+    <p>本プライバシーポリシーは予告なく変更される場合があります。変更があった場合は、このページにて最新版を公開します。</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>お問い合わせ</h2>
+    <p>プライバシーポリシーに関するご質問は、以下よりご連絡ください。</p>
+    <div class="contact-box">
+      <a href="mailto:sweepsleep23@gmail.com">sweepsleep23@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Kazuki Nishida · epub-reader · All rights reserved.
+</footer>
+
+</body>
+</html>
