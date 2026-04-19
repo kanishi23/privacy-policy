@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Penciive のすすめ — 一冊の中に、読書のすべてを。</title>
+  <meta name="description" content="EPUB・PDF・Web記事・ノートを一つに束ねる、新しい知的読書体験の紹介。"/>
+  <meta name="author" content="Penciive 編集部"/>
+  <meta property="og:title" content="Penciive のすすめ — 一冊の中に、読書のすべてを。"/>
+  <meta property="og:description" content="EPUB・PDF・Web記事・ノートを一つに束ねる、新しい知的読書体験の紹介。"/>
+  <meta property="og:type" content="article"/>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      max-width: 720px;
+      margin: 2em auto;
+      padding: 0 1.2em;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+      line-height: 1.9;
+      color: #222;
+      background: #fafafa;
+    }
+    header { border-bottom: 1px solid #ddd; padding-bottom: 1em; margin-bottom: 2em; }
+    h1 { font-size: 1.8em; margin: 0 0 0.4em; }
+    .meta { color: #888; font-size: 0.9em; }
+    h2 { font-size: 1.25em; margin-top: 2em; border-left: 4px solid #4a90e2; padding-left: 0.6em; }
+    p { text-indent: 1em; margin: 0.8em 0; }
+    footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; color: #888; font-size: 0.85em; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1a1a1a; color: #e0e0e0; }
+      header, footer { border-color: #333; }
+      .meta, footer { color: #888; }
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Penciive のすすめ — 一冊の中に、読書のすべてを。</h1>
+      <div class="meta">Penciive 編集部  ·  2026年4月19日</div>
+    </header>
+    <section>
+      <h2>第1章 はじめに — なぜ今 Penciive なのか</h2>
+      <p>本を読む、記事を読む、論文を読む、メモを取る。私たちの「読む」はいつの間にか、何個ものアプリに分散してしまいました。EPUB は Apple Books、PDF は別のビューア、Web 記事は Pocket、メモは Notion——。どの体験も単体では良くても、知識はバラバラのまま、検索できず、読み返されません。</p>
+      <p>Penciive が目指したのは、読書のすべての入口を一つにまとめることでした。紙の書籍から切り出された EPUB も、研究者が配布する PDF も、ブラウザで出会った Web 記事も、そして自分自身の手書きのノートも——同じライブラリに並び、同じように検索でき、同じように AI と対話できる。そんな「読書のハブ」を、一つのアプリとして提供したい。それが Penciive の原点です。</p>
+    </section>
+
+    <section>
+      <h2>第2章 3つの柱 — 読む・貯める・聞く</h2>
+      <p>Penciive の機能は、三つの柱で説明できます。</p>
+      <p>一つ目は「読む」。EPUB と PDF を、同じインターフェースで読めます。フォントサイズ・行間・余白・テーマ（ライト/セピア/ダーク）は自由に調整可能で、横スクロールのページめくりは紙の本に限りなく近い体験を実現しました。さらに、ハイライトは 5 色から選べ、タップひとつで注釈を残せます。</p>
+      <p>二つ目は「貯める」。Chrome 拡張機能を使えば、ブラウザで見つけた記事をワンクリックで Penciive のライブラリに保存。Readability ベースの抽出でノイズを取り除き、オフラインでも読める形に整えます。JS が重いページは Cloudflare Workers でサーバーサイドレンダリングしてから取り込むので、動的サイトも問題ありません。</p>
+      <p>三つ目は「聞く」。Penciive の最大の特徴は、取り込んだすべてのコンテンツを対象に、AI と対話できること。「あの本で著者が主張していた投資原則を教えて」「この論文の結論を要約して」「先週読んだ記事の共通点は？」——自然言語で質問するだけで、RAG が該当箇所を引用しながら答えます。読書は「読んで終わり」から「読んで対話する」へと進化します。</p>
+    </section>
+
+    <section>
+      <h2>第3章 細部に宿るこだわり</h2>
+      <p>良いアプリは、細部の設計で差がつきます。Penciive には、毎日使うからこそ気付くこだわりがいくつもあります。</p>
+      <p>たとえば、ページサムネイル。章の全ページを俯瞰できるグリッド表示は、off-screen WebView で実画面をキャプチャして生成されています。目次では辿りにくい「あの図が載っていたあたり」への移動が、サムネイルから一発で可能です。</p>
+      <p>たとえば、日本語対応。多くの EPUB リーダーが文字化けしがちな Shift_JIS エンコードの日本語書籍も、Penciive は BOM 検出と XML charset 解析、そして Shift_JIS フォールバックの三段構えで確実にデコードします。青空文庫の作品群もそのまま読めます。</p>
+      <p>たとえば、進捗の永続化。どこまで読んだかは、章・ページ・全体進捗（0〜1）の三つで自動保存されます。機種変更しても、Supabase 経由で同期された続きから読み始められます。</p>
+    </section>
+
+    <section>
+      <h2>第4章 こんな方におすすめ</h2>
+      <p>Penciive は、特に次のような方にフィットします。</p>
+      <p>研究者・学生：論文 PDF と参考書 EPUB と関連記事 Web を行き来しながら、引用を取り、AI に要約を頼みたい方。</p>
+      <p>ビジネスパーソン：業務時間にブラウザで読む記事と、通勤時間に読む書籍を一つのライブラリに統合し、ノートに落として振り返りたい方。</p>
+      <p>読書家：大量の蔵書を整理し、過去に読んだ本の内容に自由に尋ねられる「自分専用の知の検索エンジン」が欲しい方。</p>
+      <p>「読む」を楽しみ、そして「読んだ後」を豊かにしたいすべての方に、Penciive はきっと新しい時間をもたらします。今日から、あなたの知的活動を一つに束ねてみませんか。</p>
+    </section>
+    <footer>
+      <p>本記事は Penciive の紹介用サンプルコンテンツです。</p>
+    </footer>
+  </article>
+</body>
+</html>
